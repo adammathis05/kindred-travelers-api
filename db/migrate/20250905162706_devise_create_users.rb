@@ -11,7 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.2]
       t.string :first_name,         null: false
       t.string :last_name,          null: false
       t.boolean :admin,             default: false
-      t.references :tribe,          null: false, foreign_key: true
+      t.references :tribe,          null: true, foreign_key: false
 
       ## Recoverable
       t.string   :reset_password_token
@@ -38,13 +38,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.2]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
       t.timestamps null: false
     end
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
-    add_index :users, :tribe_id
+    # add_index :users, :tribe_id  # This is automatically created by t.references
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end
