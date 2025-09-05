@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  reservation_type: MyString
+  start_date: 2025-09-05 11:28:10
+  end_date: 2025-09-05 11:28:10
+  cost: 9.99
+  location: MyString
+  confirmation_number: MyString
+  user: one
+  tribe: one
+
+two:
+  title: MyString
+  description: MyText
+  reservation_type: MyString
+  start_date: 2025-09-05 11:28:10
+  end_date: 2025-09-05 11:28:10
+  cost: 9.99
+  location: MyString
+  confirmation_number: MyString
+  user: two
+  tribe: two
