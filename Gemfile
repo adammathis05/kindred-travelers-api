@@ -38,8 +38,17 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Factory for generating test data
+  gem 'factory_bot_rails'
+  
+  # Fake data generation
+  gem 'faker'
 end
 
+group :test do
+  gem 'rspec-rails'
+end
 
 
 # Authentication
